@@ -94,7 +94,7 @@ const CAMPUS_SPACES = [
   {
     id: 'biblioteca',
     pilar: 'Innovación Educativa · Cultura y Bienestar',
-    title: 'Casa Biblioteca: nueva alfombra',
+    title: 'Modernización de alfombra – Casa Biblioteca',
     summary: 'Primer hito de la transformación de Casa Biblioteca en un Learning Commons: renovación total de la alfombra con colores y texturas que diferencian zonas de estudio, colaboración y permanencia.',
     full: [
       'La transformación de Casa Biblioteca representa uno de los proyectos estratégicos de la Iniciativa Campus CESA, orientado a evolucionar la biblioteca tradicional hacia un espacio de aprendizaje activo, colaboración e innovación. Actualmente se desarrolla un proceso de análisis, diagnóstico y mesas de diálogo con las diferentes áreas y usuarios.',
@@ -104,6 +104,7 @@ const CAMPUS_SPACES = [
     folder: 'CAMBIO TAPETE BIBLIOTECA',
     structure: 'phases',
     antes: [
+      'Anexo 3 - vista general antes.png',
       'WhatsApp Image 2026-07-30 at 7.51.37 AM (1).jpeg',
       'WhatsApp Image 2026-07-30 at 7.51.38 AM (1).jpeg',
       'WhatsApp Image 2026-07-30 at 7.51.38 AM (2).jpeg',
@@ -116,6 +117,7 @@ const CAMPUS_SPACES = [
       'WhatsApp Image 2026-07-30 at 7.51.41 AM.jpeg',
     ],
     despues: [
+      'Anexo 4 - vista general despues.png',
       'WhatsApp Image 2026-07-29 at 4.06.21 PM (1).jpeg',
       'WhatsApp Image 2026-07-29 at 4.06.21 PM (2).jpeg',
       'WhatsApp Image 2026-07-29 at 4.06.21 PM (3).jpeg',
@@ -153,7 +155,7 @@ const CAMPUS_SPACES = [
   {
     id: 'banos-auditorio',
     pilar: 'Cultura, Bienestar y Sostenibilidad',
-    title: 'Modernización baños auditorio',
+    title: 'Modernización de baños del Auditorio',
     summary: 'Renovación integral de las baterías de baños del Auditorio de Casa CESA: nuevos acabados, divisiones en vidrio templado, mobiliario sanitario contemporáneo e iluminación decorativa.',
     full: [
       'La modernización de las baterías de baños del Auditorio de Casa CESA responde al propósito de fortalecer la calidad de los espacios que acompañan las principales actividades académicas, empresariales e institucionales del campus.',
@@ -175,7 +177,7 @@ const CAMPUS_SPACES = [
   {
     id: 'hall-vargas',
     pilar: 'Cultura, Bienestar y Sostenibilidad',
-    title: 'Hall y baños Casa Vargas',
+    title: 'Modernización de hall y baños Casa Vargas',
     summary: 'El hall dejó de ser solo un espacio de circulación: mobiliario tipo coworking, zonas de descanso y vegetación, más baños modernizados con un baño accesible para movilidad reducida.',
     full: [
       'La transformación del hall y las baterías de baños de Casa Vargas responde al objetivo de consolidar espacios que promuevan el bienestar, la interacción, la inclusión y el desarrollo integral de la comunidad CESA.',
@@ -238,7 +240,7 @@ const CAMPUS_SPACES = [
   {
     id: 'exito-estudiantil',
     pilar: 'Cultura y Bienestar · Transformación Organizacional',
-    title: 'Oficina de Éxito Estudiantil',
+    title: 'Modernización oficina de Éxito Estudiantil',
     summary: 'Nuevo mobiliario ergonómico, revestimientos e iluminación para una atención más cercana, cálida y eficiente al acompañamiento de los estudiantes.',
     full: [
       'La modernización de la oficina de Éxito Estudiantil responde al propósito de fortalecer los espacios de atención que acompañan el desarrollo integral de los estudiantes, apoyando el bienestar, la permanencia y el acompañamiento continuo de la comunidad estudiantil.',
@@ -253,7 +255,7 @@ const CAMPUS_SPACES = [
   {
     id: 'zona-lleras',
     pilar: 'Cultura y Bienestar',
-    title: 'Zona de descanso Casa Lleras',
+    title: 'Adecuación zona de descanso Casa Lleras',
     summary: 'Una nueva Zona de Bienestar pensada para el descanso, la desconexión y la recuperación física y mental de estudiantes, docentes y colaboradores.',
     full: [
       'La creación de la nueva Zona de Bienestar de Casa Lleras responde al compromiso del Plan de Transformación de consolidar un campus centrado en las personas. Este espacio fue concebido para ofrecer un entorno destinado al descanso, la desconexión y la recuperación física y mental.',
@@ -280,7 +282,7 @@ const CAMPUS_SPACES = [
   {
     id: 'control-acceso',
     pilar: 'Smart Campus · Transformación Organizacional',
-    title: 'Control de acceso inteligente',
+    title: 'Proyecto de control de acceso inteligente',
     summary: 'Cinco puntos de acceso con torniquetes inteligentes y reconocimiento facial, integrados con plataformas tecnológicas de control y monitoreo para un campus más seguro y ágil.',
     full: [
       'La implementación del nuevo sistema de control de acceso inteligente representa un avance en la consolidación de un Smart Campus. Este proyecto fortalece la seguridad institucional, optimiza la gestión de los accesos y mejora la experiencia de ingreso de estudiantes, docentes, colaboradores y demás públicos de interés.',
