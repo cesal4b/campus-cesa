@@ -67,7 +67,7 @@ const CAMPUS_SPACES = [
   {
     id: 'cafeteria-incolda',
     pilar: 'Cultura, Bienestar y Sostenibilidad',
-    title: 'Cafetería Casa Incolda',
+    title: 'Cafetería Incolda',
     summary: 'Un nuevo punto de encuentro para colaboradores administrativos: diseño contemporáneo, materiales cálidos e iluminación arquitectónica que fortalecen la integración y el bienestar cotidiano.',
     full: [
       'La creación de la cafetería de Casa Incolda responde al propósito de consolidar espacios que favorezcan el bienestar, la interacción y la calidad de vida de los colaboradores administrativos, en coherencia con el Plan de Transformación y su enfoque en cultura, sostenibilidad y experiencia institucional.',
@@ -211,7 +211,7 @@ const CAMPUS_SPACES = [
   {
     id: 'alfombras-zonas',
     pilar: 'Cultura y Bienestar',
-    title: 'Modernización de alfombras en Casa Vargas, Bienestar, Mejía y Echavarría',
+    title: 'Modernización de alfombras en diferentes espacios',
     summary: 'Renovación integral de alfombras en oficinas, salas de reunión y espacios colaborativos, con una colorimetría diseñada según el carácter y uso de cada ambiente.',
     full: [
       'La modernización de diferentes espacios en Casa Vargas, Casa Bienestar, Casa Mejía y Casa Echavarría responde al propósito de consolidar un campus que acompañe la evolución del modelo educativo y organizacional del CESA.',

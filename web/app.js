@@ -110,6 +110,33 @@
     });
   }
 
+  // Ajusta la proporción del marco a la de las fotos reales (la mayoría son
+  // ~4:3, no panorámicas) para que la imagen llene el espacio sin dejar
+  // franjas de fondo vacías ni recortar el contenido de forma agresiva.
+  function matchAspect(wrap, imgs) {
+    var pending = imgs.length;
+    var ratios = [];
+
+    function evaluate() {
+      if (pending > 0) return;
+      if (!ratios.length) return;
+      var avg = ratios.reduce(function (a, b) { return a + b; }, 0) / ratios.length;
+      var clamped = Math.max(1, Math.min(1.9, avg));
+      wrap.style.aspectRatio = clamped.toFixed(3);
+    }
+
+    imgs.forEach(function (img) {
+      function onReady() {
+        if (img.naturalWidth && img.naturalHeight) {
+          ratios.push(img.naturalWidth / img.naturalHeight);
+        }
+        pending -= 1;
+        evaluate();
+      }
+      if (img.complete) onReady(); else img.addEventListener('load', onReady, { once: true });
+    });
+  }
+
   function buildCompare(space) {
     var beforeSrc = imgPath(space, 'antes', space.antes[0]);
     var afterSrc = imgPath(space, 'despues', space.despues[0]);
@@ -138,6 +165,7 @@
     range.addEventListener('input', function () { setPos(range.value); });
 
     capSharpWidth(wrap, [beforeImg, afterImg]);
+    matchAspect(wrap, [beforeImg, afterImg]);
 
     return wrap;
   }
@@ -210,6 +238,7 @@
       soloImg.loading = 'lazy';
       container.appendChild(soloImg);
       capSharpWidth(soloImg, [soloImg]);
+      matchAspect(soloImg, [soloImg]);
     }
 
     var phaseGroups = el('div', 'phase-groups');
