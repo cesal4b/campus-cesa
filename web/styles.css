@@ -140,18 +140,13 @@ a { color: inherit; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background: var(--gradient-hero);
+  background:
+    radial-gradient(50% 60% at 90% 8%, rgba(79, 142, 244, .3), transparent 70%),
+    linear-gradient(100deg, rgba(8, 15, 32, .95) 0%, rgba(14, 27, 55, .93) 32%, rgba(18, 35, 71, .8) 55%, rgba(20, 40, 82, .5) 78%, rgba(20, 40, 82, .32) 100%),
+    url('assets/hero-fachada-cesa.jpg') center 32% / cover no-repeat;
   color: #fff;
   overflow: hidden;
   padding: 5rem 0 4rem;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(60% 60% at 85% 10%, rgba(79, 142, 244, .35), transparent 70%);
-  pointer-events: none;
 }
 
 .hero .container { position: relative; }
@@ -332,7 +327,7 @@ a { color: inherit; }
 .compare {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1.377; /* referencia: Modernización de salones, igual en todas las secciones */
   max-height: 34rem;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -434,7 +429,7 @@ a { color: inherit; }
 /* single "after only" hero image (sin comparación) */
 .solo-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1.377; /* misma referencia que .compare */
   max-height: 34rem;
   object-fit: cover;
   background: #0d1a30;
@@ -570,6 +565,11 @@ a { color: inherit; }
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .space { padding: 3.5rem 0; }
-  .hero { padding: 3.5rem 0 3rem; }
+  .hero {
+    padding: 3.5rem 0 3rem;
+    background:
+      linear-gradient(180deg, rgba(8, 15, 32, .95) 0%, rgba(12, 23, 47, .92) 55%, rgba(14, 27, 55, .88) 100%),
+      url('assets/hero-fachada-cesa.jpg') center 32% / cover no-repeat;
+  }
   .compare-handle .knob { width: 2.2rem; height: 2.2rem; }
 }

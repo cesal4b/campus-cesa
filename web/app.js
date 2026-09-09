@@ -78,65 +78,6 @@
 
   /* ---------- Compare slider ---------- */
 
-  // Evita estirar fotos de baja resolución (p. ej. capturas de pantalla) más
-  // allá de lo que su nitidez real permite en pantallas retina: una vez
-  // cargan las imágenes, si su resolución nativa no alcanza para llenar el
-  // ancho por defecto sin pixelarse, encoge el marco al ancho máximo nítido.
-  function capSharpWidth(wrap, imgs) {
-    var pending = imgs.length;
-    var natives = [];
-
-    function evaluate() {
-      if (pending > 0) return;
-      var minNative = Math.min.apply(null, natives);
-      if (!minNative || !isFinite(minNative)) return;
-      var dpr = window.devicePixelRatio || 1;
-      var sharpWidth = (minNative / dpr) * 1.35; // margen de tolerancia antes de notarse el escalado
-      var capped = Math.max(560, Math.min(1150, Math.round(sharpWidth)));
-      if (capped < 1100) {
-        wrap.style.maxWidth = capped + 'px';
-        wrap.style.marginLeft = 'auto';
-        wrap.style.marginRight = 'auto';
-      }
-    }
-
-    imgs.forEach(function (img) {
-      function onReady() {
-        natives.push(img.naturalWidth || Infinity);
-        pending -= 1;
-        evaluate();
-      }
-      if (img.complete) onReady(); else img.addEventListener('load', onReady, { once: true });
-    });
-  }
-
-  // Ajusta la proporción del marco a la de las fotos reales (la mayoría son
-  // ~4:3, no panorámicas) para que la imagen llene el espacio sin dejar
-  // franjas de fondo vacías ni recortar el contenido de forma agresiva.
-  function matchAspect(wrap, imgs) {
-    var pending = imgs.length;
-    var ratios = [];
-
-    function evaluate() {
-      if (pending > 0) return;
-      if (!ratios.length) return;
-      var avg = ratios.reduce(function (a, b) { return a + b; }, 0) / ratios.length;
-      var clamped = Math.max(1, Math.min(1.9, avg));
-      wrap.style.aspectRatio = clamped.toFixed(3);
-    }
-
-    imgs.forEach(function (img) {
-      function onReady() {
-        if (img.naturalWidth && img.naturalHeight) {
-          ratios.push(img.naturalWidth / img.naturalHeight);
-        }
-        pending -= 1;
-        evaluate();
-      }
-      if (img.complete) onReady(); else img.addEventListener('load', onReady, { once: true });
-    });
-  }
-
   function buildCompare(space) {
     var beforeSrc = imgPath(space, 'antes', space.antes[0]);
     var afterSrc = imgPath(space, 'despues', space.despues[0]);
@@ -163,9 +104,6 @@
     }
     setPos(50);
     range.addEventListener('input', function () { setPos(range.value); });
-
-    capSharpWidth(wrap, [beforeImg, afterImg]);
-    matchAspect(wrap, [beforeImg, afterImg]);
 
     return wrap;
   }
@@ -237,8 +175,6 @@
       soloImg.alt = space.title + ' — después';
       soloImg.loading = 'lazy';
       container.appendChild(soloImg);
-      capSharpWidth(soloImg, [soloImg]);
-      matchAspect(soloImg, [soloImg]);
     }
 
     var phaseGroups = el('div', 'phase-groups');
