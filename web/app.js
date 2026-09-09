@@ -239,7 +239,7 @@
     var header = el('header', 'site-header');
     var container = el('div', 'container');
 
-    var brand = el('a', 'brand', 'Campus CESA <span>Recorrido</span>');
+    var brand = el('a', 'brand', '<img class="brand-logo" src="assets/logo-cesa.svg" alt="" width="28" height="28">Campus CESA <span>Recorrido</span>');
     brand.href = '#top';
     container.appendChild(brand);
 
