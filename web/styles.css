@@ -21,6 +21,13 @@
   --cesa-subtle: #f4f6fb;
   --cesa-subtle: oklch(97% .012 250);
 
+  /* Fondos alternos por sección: cada tono cubre 2 secciones seguidas
+     para marcar el paso de un proyecto a otro sin romper la lectura. */
+  --tone-a: oklch(95% .022 265);
+  --tone-b: oklch(95.5% .032 220);
+  --tone-c: oklch(95.5% .032 150);
+  --tone-d: oklch(95.5% .032 70);
+
   --background: #fbfbfd;
   --background: oklch(98.5% .005 250);
   --foreground: #16233f;
@@ -245,8 +252,12 @@ a { color: inherit; }
   padding: 5rem 0;
   border-bottom: 1px solid var(--border);
   scroll-margin-top: 5.5rem;
+  transition: background .2s ease;
 }
-.space:nth-of-type(even) { background: var(--cesa-subtle); }
+.space.tone-a { background: var(--tone-a); }
+.space.tone-b { background: var(--tone-b); }
+.space.tone-c { background: var(--tone-c); }
+.space.tone-d { background: var(--tone-d); }
 
 .space-head {
   display: flex;

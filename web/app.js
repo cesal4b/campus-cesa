@@ -132,9 +132,12 @@
   }
 
   /* ---------- Space section ---------- */
+  var SPACE_TONES = ['tone-a', 'tone-b', 'tone-c', 'tone-d'];
+
   function buildSpace(space, index, total) {
     var section = el('section', 'space');
     section.id = space.id;
+    section.classList.add(SPACE_TONES[Math.floor(index / 2) % SPACE_TONES.length]);
 
     var head = el('div', 'space-head');
     var headLeft = el('div');
