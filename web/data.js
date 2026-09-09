@@ -94,7 +94,7 @@ const CAMPUS_SPACES = [
   {
     id: 'biblioteca',
     pilar: 'Innovación Educativa · Cultura y Bienestar',
-    title: 'Modernización de alfombra – Casa Biblioteca',
+    title: 'Mejoramiento de alfombra – Casa Biblioteca',
     summary: 'Primer hito de la transformación de Casa Biblioteca en un Learning Commons: renovación total de la alfombra con colores y texturas que diferencian zonas de estudio, colaboración y permanencia.',
     full: [
       'La transformación de Casa Biblioteca representa uno de los proyectos estratégicos de la Iniciativa Campus CESA, orientado a evolucionar la biblioteca tradicional hacia un espacio de aprendizaje activo, colaboración e innovación. Actualmente se desarrolla un proceso de análisis, diagnóstico y mesas de diálogo con las diferentes áreas y usuarios.',
