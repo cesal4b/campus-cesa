@@ -243,11 +243,28 @@
     brand.href = '#top';
     container.appendChild(brand);
 
+    var menuToggle = el('button', 'menu-toggle', '<span></span><span></span><span></span>');
+    menuToggle.type = 'button';
+    menuToggle.setAttribute('aria-label', 'Abrir menú de secciones');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    container.appendChild(menuToggle);
+
+    function closeMobileNav() {
+      header.classList.remove('nav-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('nav-open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
     var nav = el('nav', 'nav-scroll');
     CAMPUS_SPACES.forEach(function (space) {
       var pill = el('a', 'nav-pill', space.title);
       pill.href = '#' + space.id;
       pill.dataset.target = space.id;
+      pill.addEventListener('click', closeMobileNav);
       nav.appendChild(pill);
     });
     container.appendChild(nav);
