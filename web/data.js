@@ -2,7 +2,7 @@
 
 const CAMPUS_INTRO = {
   eyebrow: 'Dirección de Infraestructura · Iniciativa Campus CESA',
-  title: 'Campus CESA',
+  title: 'Transformación, ¿cómo vamos? | Campus CESA en evolución.',
   subtitle: 'Un recorrido por la transformación de nuestros espacios',
   lead: 'La Iniciativa Campus CESA es el proyecto estratégico liderado por la Dirección de Infraestructura que materializa, a través de la transformación de los espacios físicos, la visión del Plan de Transformación del CESA. Cada intervención convierte la infraestructura en un habilitador del desarrollo institucional y de la experiencia de toda la comunidad CESA.',
   body: 'Esta iniciativa impulsa la modernización progresiva del campus mediante la renovación y creación de espacios flexibles, tecnológicos, sostenibles y centrados en las personas, capaces de acompañar la evolución del modelo educativo CESA for Life y fortalecer los pilares de innovación educativa, transformación organizacional, cultura y bienestar. Más que un conjunto de proyectos de infraestructura, Campus CESA constituye una estrategia de transformación integral hacia un modelo de Smart Campus, donde la arquitectura, la tecnología y el diseño trabajan de manera articulada para ofrecer experiencias de alto valor.',
